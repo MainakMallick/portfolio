@@ -13,15 +13,15 @@
 </head>
 
 <body>
-    <!-- MODIFIED: Nav bar now contains the theme toggle -->
     <nav class="top-nav">
         <ul>
             <li><a href="#hero-section">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#education-timeline">Education</a></li> <!-- New Link -->
             <li><a href="#research">Research</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li> <!-- Theme toggle moved here -->
+            <li>
                 <button id="theme-toggle" aria-label="Toggle theme">
                     <!-- Icon will be inserted by script.js -->
                 </button>
@@ -56,409 +56,243 @@
             </div>
         </header>
 
-        <!-- Skills Section - RESTRUCTURED -->
         <section id="skills" class="fade-in-section">
             <h2 class="section-title">Skills</h2>
-
             <h3 class="skill-category-title">Artificial Intelligence & Machine Learning</h3>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>
-                    <h3>Python</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://raw.githubusercontent.com/pytorch/pytorch/master/docs/source/_static/img/pytorch-logo-dark.svg" alt="PyTorch" style="filter: var(--svg-filter);"/>
-                    <h3>PyTorch</h3>
-                </div>
-                <!-- Add other AI/ML skills like TensorFlow, Keras, Scikit-learn if applicable -->
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/><h3>Python</h3></div>
+                <div class="skill-card"><img src="https://raw.githubusercontent.com/pytorch/pytorch/master/docs/source/_static/img/pytorch-logo-dark.svg" alt="PyTorch" style="filter: var(--svg-filter);"/><h3>PyTorch</h3></div>
             </div>
-
             <h3 class="skill-category-title">Web & App Development</h3>
             <h4 class="skill-subcategory-title">Frontend</h4>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"/>
-                    <h3>HTML5</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"/>
-                    <h3>CSS3</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"/>
-                    <h3>JavaScript</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript"/>
-                    <h3>TypeScript</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/>
-                    <h3>React</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"/>
-                    <h3>Vue.js</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" alt="AngularJS"/>
-                    <h3>AngularJS</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"/>
-                    <h3>Bootstrap</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter"/>
-                    <h3>Flutter</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" alt="Swift"/>
-                    <h3>Swift</h3>
-                </div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"/><h3>HTML5</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"/><h3>CSS3</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"/><h3>JavaScript</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript"/><h3>TypeScript</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/><h3>React</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"/><h3>Vue.js</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" alt="AngularJS"/><h3>AngularJS</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"/><h3>Bootstrap</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter"/><h3>Flutter</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" alt="Swift"/><h3>Swift</h3></div>
             </div>
             <h4 class="skill-subcategory-title">Backend</h4>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/>
-                    <h3>Node.js</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask"/>
-                    <h3>Flask</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot"/>
-                    <h3>Spring Boot</h3>
-                </div>
-                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="Django"/>
-                    <h3>Django</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-plain-wordmark.svg" alt="Ruby on Rails"/>
-                    <h3>Ruby on Rails</h3>
-                </div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/><h3>Node.js</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask"/><h3>Flask</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot"/><h3>Spring Boot</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="Django"/><h3>Django</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-plain-wordmark.svg" alt="Ruby on Rails"/><h3>Ruby on Rails</h3></div>
             </div>
-
             <h3 class="skill-category-title">Programming Languages</h3>
             <div class="skills-grid">
-                 <div class="skill-card"> <!-- Python can be listed again or primary here -->
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>
-                    <h3>Python</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"/>
-                    <h3>Java</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++"/>
-                    <h3>C++</h3>
-                </div>
-                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C"/>
-                    <h3>C</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg" alt="Ruby"/>
-                    <h3>Ruby</h3>
-                </div>
-                <div class="skill-card"> <!-- Generic SQL -->
-                    <h3>SQL</h3>
-                </div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/><h3>Python</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"/><h3>Java</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++"/><h3>C++</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C"/><h3>C</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg" alt="Ruby"/><h3>Ruby</h3></div>
+                <div class="skill-card"><h3>SQL</h3></div>
             </div>
-
             <h3 class="skill-category-title">Databases</h3>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"/>
-                    <h3>MongoDB</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"/>
-                    <h3>PostgreSQL</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis"/>
-                    <h3>Redis</h3>
-                </div>
-                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="MySQL"/>
-                    <h3>MySQL</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite"/>
-                    <h3>SQLite</h3>
-                </div>
-                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="Firebase"/>
-                    <h3>Firebase</h3>
-                </div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"/><h3>MongoDB</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"/><h3>PostgreSQL</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis"/><h3>Redis</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="MySQL"/><h3>MySQL</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite"/><h3>SQLite</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="Firebase"/><h3>Firebase</h3></div>
             </div>
-
             <h3 class="skill-category-title">Cloud & DevOps</h3>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" style="filter: var(--svg-filter);"/>
-                    <h3>AWS</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"/>
-                    <h3>Docker</h3>
-                </div>
-                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="GCP"/>
-                    <h3>GCP</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes"/>
-                    <h3>Kubernetes</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" alt="Apache Kafka" style="filter: var(--svg-filter);"/>
-                    <h3>Apache Kafka</h3>
-                </div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" style="filter: var(--svg-filter);"/><h3>AWS</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"/><h3>Docker</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="GCP"/><h3>GCP</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes"/><h3>Kubernetes</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" alt="Apache Kafka" style="filter: var(--svg-filter);"/><h3>Apache Kafka</h3></div>
             </div>
-
             <h3 class="skill-category-title">Developer Tools</h3>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"/>
-                    <h3>Git</h3>
-                </div>
-                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" alt="Android Studio"/>
-                    <h3>Android Studio</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xcode/xcode-original.svg" alt="Xcode"/>
-                    <h3>Xcode</h3>
-                </div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"/><h3>Git</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" alt="Android Studio"/><h3>Android Studio</h3></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xcode/xcode-original.svg" alt="Xcode"/><h3>Xcode</h3></div>
             </div>
         </section>
 
-
+        <!-- Professional Experience Section - Card Based -->
         <section id="experience" class="fade-in-section">
             <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="experience-header">
-                            <h3 class="experience-title">Predictive maintenance of Robotic Hand with Digital Twin and MAML algorithm</h3>
-                            <div class="experience-position">Graduate Research Assistant</div>
-                            <div class="experience-duration">Dec 2024 - Present</div>
-                            <div class="experience-company">Georgia Tech (Supervisor – Dr. Seung-Kyum Choi)</div>
-                        </div>
-                        <ul class="experience-points">
-                            <li>Generated synthetic sensor data using <strong>Isaac Sim</strong> to simulate real-world movement of a <strong>KUKA LBR robot arm</strong>.</li>
-                            <li>Developed a few shot learning pipeline using the <strong>MAML algorithm</strong> for fault classification in difference joints.</li>
-                            <li>Achieved over <strong>86.4% testing accuracy</strong> by optimizing the model with a minimal dataset.</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Icon"/> Python</span>
-                            <span class="tech-item"><img src="https://raw.githubusercontent.com/pytorch/pytorch/master/docs/source/_static/img/pytorch-logo-dark.svg" alt="PyTorch Icon" style="filter: var(--svg-filter);"/> PyTorch</span>
-                            <span class="tech-item"><img src="https://www.vectorlogo.zone/logos/nvidia/nvidia-icon.svg" alt="Isaac Sim Icon"/> Isaac Sim</span>
-                        </div>
+            <div class="experience-card-grid"> <!-- Changed from timeline to card grid -->
+                <article class="experience-card"> <!-- Using article and specific class -->
+                    <div class="experience-header">
+                        <h3 class="experience-title">Predictive maintenance of Robotic Hand with Digital Twin and MAML algorithm</h3>
+                        <div class="experience-position">Graduate Research Assistant</div>
+                        <div class="experience-duration">Dec 2024 - Present</div>
+                        <div class="experience-company">Georgia Tech (Supervisor – Dr. Seung-Kyum Choi)</div>
                     </div>
+                    <ul class="experience-points">
+                        <li>Generated synthetic sensor data using <strong>Isaac Sim</strong> to simulate real-world movement of a <strong>KUKA LBR robot arm</strong>.</li>
+                        <li>Developed a few shot learning pipeline using the <strong>MAML algorithm</strong> for fault classification in difference joints.</li>
+                        <li>Achieved over <strong>86.4% testing accuracy</strong> by optimizing the model with a minimal dataset.</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Icon"/> Python</span>
+                        <span class="tech-item"><img src="https://raw.githubusercontent.com/pytorch/pytorch/master/docs/source/_static/img/pytorch-logo-dark.svg" alt="PyTorch Icon" style="filter: var(--svg-filter);"/> PyTorch</span>
+                        <span class="tech-item"><img src="https://www.vectorlogo.zone/logos/nvidia/nvidia-icon.svg" alt="Isaac Sim Icon"/> Isaac Sim</span>
+                    </div>
+                </article>
+                <article class="experience-card">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Full Stack Development</h3>
+                        <div class="experience-position">Graduate Research Assistant</div>
+                        <div class="experience-duration">Aug 2024 - Dec 2024</div>
+                        <div class="experience-company">Georgia Tech (Supervisor – Dr. Seung-Kyum Choi)</div>
+                    </div>
+                    <ul class="experience-points">
+                        <li>Built responsive UIs using <strong>Vue.js</strong> and <strong>E-Charts</strong> to visualize real-time sensor data, reducing access time by <strong>20%</strong>.</li>
+                        <li>Engineered REST APIs with <strong>Flask</strong>, integrated <strong>WebSocket</strong> and <strong>Redis</strong>, cutting data latency by <strong>28%</strong> and supporting <strong>30%</strong> more concurrent users.</li>
+                        <li>Streamlined <strong>CI/CD pipelines</strong> and deployments using <strong>Docker</strong>, <strong>GitHub Actions</strong>, and <strong>AWS S3</strong>, improving deployment speed by <strong>40%</strong> and reducing manual errors by <strong>50%</strong>.</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js Icon"/> Vue.js</span>
+                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask Icon"/> Flask</span>
+                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis Icon"/> Redis</span>
+                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker Icon"/> Docker</span>
+                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS Icon" style="filter: var(--svg-filter);"/> AWS</span>
+                    </div>
+                </article>
+                <article class="experience-card">
+                     <div class="experience-header">
+                        <h3 class="experience-title">Managed Collections and Recoveries Decision systems</h3>
+                        <div class="experience-position">Software Engineer</div>
+                        <div class="experience-duration">July 2022 - Aug 2024</div>
+                        <div class="experience-company">HSBC Bank</div>
+                    </div>
+                    <ul class="experience-points">
+                        <li>Built and maintained full-stack web apps for risk analysis tools using <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>.</li>
+                        <li>Developed REST APIs and microservices with <strong>Spring Boot</strong>, <strong>Java</strong>, and <strong>PostgreSQL</strong> for data integration.</li>
+                        <li>Deployed <strong>24+</strong> business critical code changes in <strong>SAS EG</strong> and <strong>SAS ID</strong> env., impacting over <strong>£3 million</strong> in assets.</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Icon"/> React</span>
+                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Icon"/> Node.js</span>
+                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB Icon"/> MongoDB</span>
+                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot Icon"/> Spring</span>
+                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL Icon"/> PostgreSQL</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- New Brief Education Timeline Section -->
+        <section id="education-timeline" class="fade-in-section">
+            <h2 class="section-title">Education & Key Milestones</h2>
+            <div class="brief-timeline">
+                <div class="brief-timeline-item">
+                    <div class="brief-timeline-content">
+                        <h4>Meta Platforms, Inc.</h4>
+                        <p>Software Development Engineer Intern</p>
+                    </div>
+                    <div class="brief-timeline-logo-wrapper">
+                         <svg class="placeholder-logo meta-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 C75 10 90 30 90 50 S75 90 50 90 C25 90 10 70 10 50 S25 10 50 10 Z M50 20 C60 20 70 35 70 50 S60 80 50 80 C40 80 30 65 30 50 S40 20 50 20 Z" fill="currentColor"/></svg>
+                    </div>
+                    <div class="brief-timeline-date">2025 - 2025</div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="experience-header">
-                            <h3 class="experience-title">Full Stack Development</h3>
-                            <div class="experience-position">Graduate Research Assistant</div>
-                            <div class="experience-duration">Aug 2024 - Dec 2024</div>
-                            <div class="experience-company">Georgia Tech (Supervisor – Dr. Seung-Kyum Choi)</div>
-                        </div>
-                        <ul class="experience-points">
-                            <li>Built responsive UIs using <strong>Vue.js</strong> and <strong>E-Charts</strong> to visualize real-time sensor data, reducing access time by <strong>20%</strong>.</li>
-                            <li>Engineered REST APIs with <strong>Flask</strong>, integrated <strong>WebSocket</strong> and <strong>Redis</strong>, cutting data latency by <strong>28%</strong> and supporting <strong>30%</strong> more concurrent users.</li>
-                            <li>Streamlined <strong>CI/CD pipelines</strong> and deployments using <strong>Docker</strong>, <strong>GitHub Actions</strong>, and <strong>AWS S3</strong>, improving deployment speed by <strong>40%</strong> and reducing manual errors by <strong>50%</strong>.</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js Icon"/> Vue.js</span>
-                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask Icon"/> Flask</span>
-                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis Icon"/> Redis</span>
-                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker Icon"/> Docker</span>
-                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS Icon" style="filter: var(--svg-filter);"/> AWS</span>
-                        </div>
+                <div class="brief-timeline-item">
+                    <div class="brief-timeline-content">
+                        <h4>University of Southern California</h4>
+                        <p>M.S Computer Science</p>
                     </div>
+                     <div class="brief-timeline-logo-wrapper">
+                        <svg class="placeholder-logo usc-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><text x="50" y="65" font-size="50" text-anchor="middle" fill="currentColor" font-family="serif" font-weight="bold">SC</text></svg>
+                    </div>
+                    <div class="brief-timeline-date">2024 - 2025</div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                         <div class="experience-header">
-                            <h3 class="experience-title">Managed Collections and Recoveries Decision systems</h3>
-                            <div class="experience-position">Software Engineer</div>
-                            <div class="experience-duration">July 2022 - Aug 2024</div>
-                            <div class="experience-company">HSBC Bank</div>
-                        </div>
-                        <ul class="experience-points">
-                            <li>Built and maintained full-stack web apps for risk analysis tools using <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>.</li>
-                            <li>Developed REST APIs and microservices with <strong>Spring Boot</strong>, <strong>Java</strong>, and <strong>PostgreSQL</strong> for data integration.</li>
-                            <li>Deployed <strong>24+</strong> business critical code changes in <strong>SAS EG</strong> and <strong>SAS ID</strong> env., impacting over <strong>£3 million</strong> in assets.</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Icon"/> React</span>
-                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Icon"/> Node.js</span>
-                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB Icon"/> MongoDB</span>
-                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot Icon"/> Spring</span>
-                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL Icon"/> PostgreSQL</span>
-                        </div>
+                 <!-- Example: Add your Georgia Tech Education Here -->
+                <div class="brief-timeline-item">
+                    <div class="brief-timeline-content">
+                        <h4>Georgia Institute of Technology</h4>
+                        <p>M.S. Computational Science and Engineering</p>
                     </div>
+                    <div class="brief-timeline-logo-wrapper">
+                        <!-- Placeholder for Georgia Tech Logo -->
+                        <svg class="placeholder-logo gt-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><text x="50" y="65" font-size="50" text-anchor="middle" fill="currentColor" font-family="sans-serif" font-weight="bold">GT</text></svg>
+                    </div>
+                    <div class="brief-timeline-date">Current</div> <!-- Or specific years -->
                 </div>
             </div>
         </section>
+
 
         <section id="research" class="fade-in-section">
             <h2 class="section-title">Research</h2>
             <div class="card-grid">
                 <article class="card">
-                    <div class="card-image-wrapper">
-                        <img src="images/Research2.png" alt="Ensemble Meta-Learning Research Visualization">
-                    </div>
+                    <div class="card-image-wrapper"><img src="images/Research2.png" alt="Ensemble Meta-Learning Research Visualization"></div>
                     <div class="card-content">
-                        <h3>
-                            <a href="https://www.mdpi.com/1424-8220/25/6/1745" target="_blank" rel="noopener noreferrer">
-                                <span class="papertitle">Ensemble-Based Model-Agnostic Meta-Learning...</span>
-                            </a>
-                        </h3>
-                         <p class="card-meta">
-                            <strong>Mainak Mallick</strong>, Young-Dae Shim, Seung-Kyum Choi <br>
-                             <em>MDPI, Sensors</em>, 2024
-                        </p>
-                        <ul>
-                            <li>Developed an <strong>ensemble meta-learning framework</strong> with <strong>digital twins</strong> for real-time robotic arm fault classification.</li>
-                            <li>Utilized <strong>Latin Hypercube Sampling (LHS)</strong> for enhanced generalization and stability in <strong>cross-domain fault detection</strong>.</li>
-                            <li>Demonstrated superior performance over <strong>ANIL, ProtoNet, and Reptile</strong> in classification accuracy on synthetic vibration data.</li>
-                        </ul>
+                        <h3><a href="https://www.mdpi.com/1424-8220/25/6/1745" target="_blank" rel="noopener noreferrer"><span class="papertitle">Ensemble-Based Model-Agnostic Meta-Learning...</span></a></h3>
+                        <p class="card-meta"><strong>Mainak Mallick</strong>, Young-Dae Shim, Seung-Kyum Choi <br><em>MDPI, Sensors</em>, 2024</p>
+                        <ul><li>Developed an <strong>ensemble meta-learning framework</strong> with <strong>digital twins</strong> for real-time robotic arm fault classification.</li><li>Utilized <strong>Latin Hypercube Sampling (LHS)</strong> for enhanced generalization and stability in <strong>cross-domain fault detection</strong>.</li><li>Demonstrated superior performance over <strong>ANIL, ProtoNet, and Reptile</strong> in classification accuracy on synthetic vibration data.</li></ul>
                     </div>
                 </article>
                 <article class="card">
-                    <div class="card-image-wrapper">
-                        <img src="images/Research1.jpg" alt="Honeycomb Panel Optimization Visualization">
+                    <div class="card-image-wrapper"><img src="images/Research1.jpg" alt="Honeycomb Panel Optimization Visualization"></div>
+                    <div class="card-content">
+                        <h3><a href="https://doi.org/10.1016/j.matpr.2021.10.388" target="_blank" rel="noopener noreferrer"><span class="papertitle">Genetic Algorithm-Based Design Optimization...</span></a></h3>
+                        <p class="card-meta"><strong>Mainak Mallick</strong>, A. Chakrabarty, N. Khutia <br><em>Materials Today</em>, 2022</p>
+                        <ul><li>Optimized <strong>honeycomb sandwich panels</strong> for improved <strong>impact energy absorption</strong> via <strong>NSGA-II</strong>.</li><li>Integrated <strong>MATLAB-ABAQUS</strong> with <strong>Python scripting</strong> to optimize core cell count and wall thickness.</li><li>Achieved significant improvements in panel performance metrics through multi-objective optimization.</li></ul>
                     </div>
-                     <div class="card-content">
-                        <h3>
-                            <a href="https://doi.org/10.1016/j.matpr.2021.10.388" target="_blank" rel="noopener noreferrer">
-                                <span class="papertitle">Genetic Algorithm-Based Design Optimization...</span>
-                            </a>
-                        </h3>
-                        <p class="card-meta">
-                             <strong>Mainak Mallick</strong>, A. Chakrabarty, N. Khutia <br>
-                            <em>Materials Today</em>, 2022
-                        </p>
-                        <ul>
-                            <li>Optimized <strong>honeycomb sandwich panels</strong> for improved <strong>impact energy absorption</strong> via <strong>NSGA-II</strong>.</li>
-                            <li>Integrated <strong>MATLAB-ABAQUS</strong> with <strong>Python scripting</strong> to optimize core cell count and wall thickness.</li>
-                            <li>Achieved significant improvements in panel performance metrics through multi-objective optimization.</li>
-                         </ul>
-                     </div>
                 </article>
             </div>
         </section>
 
         <section id="projects" class="fade-in-section">
             <h2 class="section-title">Projects</h2>
-
             <h3 class="project-category">Artificial Intelligence</h3>
             <div class="card-grid">
                 <article class="card">
-                     <div class="card-image-wrapper">
-                         <img src="images/Screenshot 2025-03-15 165839.png" alt="LLaMA Fine-Tuning Project Snippet">
-                     </div>
+                     <div class="card-image-wrapper"><img src="images/Screenshot 2025-03-15 165839.png" alt="LLaMA Fine-Tuning Project Snippet"></div>
                      <div class="card-content">
-                         <h3 class="collapsible-trigger">Fine-Tuning LLaMA 3B for Code Completion
-                             <span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Jan 2025 - Present</span>
-                         </h3>
-                         <ul class="collapsible-content">
-                             <li>Comparing <strong>ReFT vs IA3</strong> for parameter-efficient fine-tuning of <strong>LLAMA 3B</strong> on <strong>HumanEval</strong>.</li>
-                             <li>Analyzing <strong>ReFT's representation edits</strong> vs <strong>IA3's activation scaling</strong> for program synthesis.</li>
-                             <li>Benchmarking <strong>ReFT's efficiency gains</strong> against <strong>IA3's lightweight adaptation</strong> on coding tasks.</li>
-                         </ul>
+                         <h3 class="collapsible-trigger">Fine-Tuning LLaMA 3B for Code Completion<span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Jan 2025 - Present</span></h3>
+                         <ul class="collapsible-content"><li>Comparing <strong>ReFT vs IA3</strong> for parameter-efficient fine-tuning of <strong>LLAMA 3B</strong> on <strong>HumanEval</strong>.</li><li>Analyzing <strong>ReFT's representation edits</strong> vs <strong>IA3's activation scaling</strong> for program synthesis.</li><li>Benchmarking <strong>ReFT's efficiency gains</strong> against <strong>IA3's lightweight adaptation</strong> on coding tasks.</li></ul>
                      </div>
                  </article>
                  <article class="card">
-                    <div class="card-image-wrapper">
-                        <img src="images/Screenshot 2025-03-15 124538.png" alt="Volumetric Occupancy Prediction Project Visualization">
-                    </div>
+                    <div class="card-image-wrapper"><img src="images/Screenshot 2025-03-15 124538.png" alt="Volumetric Occupancy Prediction Project Visualization"></div>
                     <div class="card-content">
-                        <h3 class="collapsible-trigger">
-                            <a href="https://loggs.github.io/cs7641-project-proposal/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
-                                Volumetric Occupancy Prediction & Labeling
-                            </a>
-                            <span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Aug 2024 - Dec 2024</span>
-                        </h3>
-                        <ul class="collapsible-content">
-                            <li>Developed <strong>ISO model-based framework</strong> for volumetric occupancy prediction indoors.</li>
-                            <li>Integrated <strong>YOLO</strong> for real-time object detection and segmentation.</li>
-                            <li>Employed <strong>CLIP</strong> for semantic labeling, enabling contextual understanding of scenes.</li>
-                        </ul>
+                        <h3 class="collapsible-trigger"><a href="https://loggs.github.io/cs7641-project-proposal/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Volumetric Occupancy Prediction & Labeling</a><span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Aug 2024 - Dec 2024</span></h3>
+                        <ul class="collapsible-content"><li>Developed <strong>ISO model-based framework</strong> for volumetric occupancy prediction indoors.</li><li>Integrated <strong>YOLO</strong> for real-time object detection and segmentation.</li><li>Employed <strong>CLIP</strong> for semantic labeling, enabling contextual understanding of scenes.</li></ul>
                     </div>
                  </article>
                  <article class="card">
-                    <div class="card-image-wrapper">
-                        <img src="images/placeholder_defect_detection.png" alt="Automated Defect Detection Project Visualization">
-                    </div>
+                    <div class="card-image-wrapper"><img src="images/placeholder_defect_detection.png" alt="Automated Defect Detection Project Visualization"></div>
                     <div class="card-content">
-                        <h3 class="collapsible-trigger">Automated Defect Detection in Manufacturing using Self-Supervised Anomaly Localization
-                            <span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">May 2025 - Aug 2025</span>
-                        </h3>
-                        <ul class="collapsible-content">
-                            <li>Developed a self-supervised learning pipeline using <strong>contrastive methods (e.g., SimCLR)</strong> on <strong>PyTorch</strong> to learn robust visual features from unlabeled industrial image data, significantly reducing manual annotation efforts.</li>
-                            <li>Engineered and evaluated an anomaly localization module (e.g., PatchCore) achieving an <strong>F1-score of 92.5%</strong> in identifying and segmenting diverse defects on the MVTec AD benchmark.</li>
-                        </ul>
+                        <h3 class="collapsible-trigger">Automated Defect Detection in Manufacturing using Self-Supervised Anomaly Localization<span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">May 2025 - Aug 2025</span></h3>
+                        <ul class="collapsible-content"><li>Developed a self-supervised learning pipeline using <strong>contrastive methods (e.g., SimCLR)</strong> on <strong>PyTorch</strong> to learn robust visual features from unlabeled industrial image data, significantly reducing manual annotation efforts.</li><li>Engineered and evaluated an anomaly localization module (e.g., PatchCore) achieving an <strong>F1-score of 92.5%</strong> in identifying and segmenting diverse defects on the MVTec AD benchmark.</li></ul>
                     </div>
                 </article>
                 <article class="card">
-                    <div class="card-image-wrapper">
-                        <img src="images/placeholder_stable_diffusion.png" alt="Controllable Artistic Style Transfer Project Visualization">
-                    </div>
+                    <div class="card-image-wrapper"><img src="images/placeholder_stable_diffusion.png" alt="Controllable Artistic Style Transfer Project Visualization"></div>
                     <div class="card-content">
-                        <h3 class="collapsible-trigger">Controllable Artistic Style Transfer with Stable Diffusion via Cross-Attention Modulation
-                            <span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Sep 2025 - Dec 2025</span>
-                        </h3>
-                        <ul class="collapsible-content">
-                            <li>Investigated cross-attention map manipulation within <strong>Stable Diffusion (SDXL)</strong> and fine-tuned using <strong>Low-Rank Adaptation (LoRA)</strong> for precise artistic style transfer from complex textual prompts.</li>
-                            <li>Demonstrated <strong>15% improved style adherence</strong> (CLIP/FID metrics) over baseline prompting techniques and deployed an interactive <strong>Gradio demo</strong> for personalized, controllable image generation.</li>
-                        </ul>
+                        <h3 class="collapsible-trigger">Controllable Artistic Style Transfer with Stable Diffusion via Cross-Attention Modulation<span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Sep 2025 - Dec 2025</span></h3>
+                        <ul class="collapsible-content"><li>Investigated cross-attention map manipulation within <strong>Stable Diffusion (SDXL)</strong> and fine-tuned using <strong>Low-Rank Adaptation (LoRA)</strong> for precise artistic style transfer from complex textual prompts.</li><li>Demonstrated <strong>15% improved style adherence</strong> (CLIP/FID metrics) over baseline prompting techniques and deployed an interactive <strong>Gradio demo</strong> for personalized, controllable image generation.</li></ul>
                     </div>
                 </article>
             </div>
-
             <h3 class="project-category">Web Development</h3>
             <div class="card-grid">
                 <article class="card">
-                    <div class="card-image-wrapper">
-                        <img src="images/Screenshot 2025-03-15 174632.png" alt="AI Research Recommender Project Interface">
-                    </div>
+                    <div class="card-image-wrapper"><img src="images/Screenshot 2025-03-15 174632.png" alt="AI Research Recommender Project Interface"></div>
                      <div class="card-content">
-                         <h3 class="collapsible-trigger">
-                            <a href="https://mainakmallick.github.io/aether_assist/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
-                                AI-Powered Research Paper Recommender
-                            </a>
-                            <span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Jun 2022 - Aug 2022</span>
-                         </h3>
-                         <ul class="collapsible-content">
-                             <li>Built a recommender using <strong>React, Node.js, MongoDB, OpenAI API</strong>.</li>
-                             <li>Integrated <strong>arXiv/Semantic Scholar APIs</strong> for paper fetching and summary generation.</li>
-                             <li>Utilized <strong>OpenAI</strong> for AI-driven, personalized paper suggestions based on user input.</li>
-                         </ul>
+                         <h3 class="collapsible-trigger"><a href="https://mainakmallick.github.io/aether_assist/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">AI-Powered Research Paper Recommender</a><span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Jun 2022 - Aug 2022</span></h3>
+                         <ul class="collapsible-content"><li>Built a recommender using <strong>React, Node.js, MongoDB, OpenAI API</strong>.</li><li>Integrated <strong>arXiv/Semantic Scholar APIs</strong> for paper fetching and summary generation.</li><li>Utilized <strong>OpenAI</strong> for AI-driven, personalized paper suggestions based on user input.</li></ul>
                      </div>
                  </article>
                  <article class="card">
-                    <div class="card-image-wrapper">
-                        <img src="images/placeholder_latex_editor.png" alt="AI Agent Latex Editor Project Visualization">
-                    </div>
+                    <div class="card-image-wrapper"><img src="images/placeholder_latex_editor.png" alt="AI Agent Latex Editor Project Visualization"></div>
                     <div class="card-content">
-                        <h3 class="collapsible-trigger">AI Agent based Latex Editor Web App
-                            <span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Aug 2024 - Dec 2024</span>
-                        </h3>
-                        <ul class="collapsible-content">
-                            <li>Developed an AI-Agent integrated Latex Editor using <strong>Vue, Node.js, MongoDB, and OpenAI API</strong> to automatically edit the Latex Script based on user input and search queries.</li>
-                            <li>Integrated external APIs (<strong>arXiv and Semantic Scholar</strong>) to fetch research papers and used <strong>OpenAI API</strong> for generating personalized summaries and inputs.</li>
-                        </ul>
+                        <h3 class="collapsible-trigger">AI Agent based Latex Editor Web App<span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Aug 2024 - Dec 2024</span></h3>
+                        <ul class="collapsible-content"><li>Developed an AI-Agent integrated Latex Editor using <strong>Vue, Node.js, MongoDB, and OpenAI API</strong> to automatically edit the Latex Script based on user input and search queries.</li><li>Integrated external APIs (<strong>arXiv and Semantic Scholar</strong>) to fetch research papers and used <strong>OpenAI API</strong> for generating personalized summaries and inputs.</li></ul>
                     </div>
                 </article>
             </div>
