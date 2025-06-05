@@ -18,7 +18,7 @@
             <li><a href="#hero-section">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#education-timeline">Education</a></li> <!-- New Link -->
+            <li><a href="#education-timeline">Education</a></li>
             <li><a href="#research">Research</a></li>
             <li><a href="#projects">Projects</a></li>
             <li>
@@ -33,7 +33,13 @@
 
         <header id="hero-section" class="hero fade-in-section">
             <div class="hero-content">
+                <p class="hero-greeting">Hi there! 👋 Thanks for visiting. I'm</p>
                 <h1 class="name">Mainak Mallick</h1>
+                <!-- ADDED TYPING ANIMATION ELEMENT HERE -->
+                <p class="typing-container">
+                    <span id="typing-animation"></span>
+                    <span class="typing-cursor"></span>
+                </p>
                 <div class="intro-text">
                     <p><strong>Machine Learning Engineer</strong> and <strong>Full Stack Developer</strong> with a unique blend of research and industry experience, currently pursuing a Master's in <strong>Computational Science and Engineering</strong> at <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer">Georgia Tech</a>. Specializing in developing <strong>scalable AI solutions</strong>, with a focus on <strong>few-shot learning</strong>, <strong>digital twins</strong>, and <strong>real-time systems</strong>.</p>
                     <p>At Georgia Tech, pioneering research in <strong>predictive maintenance</strong> using <strong>meta-learning (MAML)</strong> and <strong>digital twins</strong>, achieving 86% accuracy in fault detection. Engineering high-performance <strong>full-stack applications</strong> with <strong>Vue.js</strong>, <strong>Flask</strong>, and <strong>Redis</strong>, while implementing efficient <strong>CI/CD pipelines</strong> using <strong>Docker</strong> and <strong>AWS</strong>.</p>
@@ -62,6 +68,15 @@
             <div class="skills-grid">
                 <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/><h3>Python</h3></div>
                 <div class="skill-card"><img src="https://raw.githubusercontent.com/pytorch/pytorch/master/docs/source/_static/img/pytorch-logo-dark.svg" alt="PyTorch" style="filter: var(--svg-filter);"/><h3>PyTorch</h3></div>
+                <div class="skill-card"><h3>NumPy</h3></div>
+                <div class="skill-card"><h3>Pandas</h3></div>
+                <div class="skill-card"><h3>Scikit-Learn</h3></div>
+                <div class="skill-card"><h3>LLM</h3></div>
+                <div class="skill-card"><h3>LSTM</h3></div>
+                <div class="skill-card"><h3>NLP</h3></div>
+                <div class="skill-card"><h3>CNN</h3></div>
+                <div class="skill-card"><h3>Computer Vision</h3></div>
+                <div class="skill-card"><h3>CUDA</h3></div>
             </div>
             <h3 class="skill-category-title">Web & App Development</h3>
             <h4 class="skill-subcategory-title">Frontend</h4>
@@ -119,11 +134,10 @@
             </div>
         </section>
 
-        <!-- Professional Experience Section - Card Based -->
         <section id="experience" class="fade-in-section">
             <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-card-grid"> <!-- Changed from timeline to card grid -->
-                <article class="experience-card"> <!-- Using article and specific class -->
+            <div class="experience-card-grid">
+                <article class="experience-card">
                     <div class="experience-header">
                         <h3 class="experience-title">Predictive maintenance of Robotic Hand with Digital Twin and MAML algorithm</h3>
                         <div class="experience-position">Graduate Research Assistant</div>
@@ -184,7 +198,6 @@
             </div>
         </section>
 
-        <!-- New Brief Education Timeline Section -->
         <section id="education-timeline" class="fade-in-section">
             <h2 class="section-title">Education & Key Milestones</h2>
             <div class="brief-timeline">
@@ -208,21 +221,18 @@
                     </div>
                     <div class="brief-timeline-date">2024 - 2025</div>
                 </div>
-                 <!-- Example: Add your Georgia Tech Education Here -->
                 <div class="brief-timeline-item">
                     <div class="brief-timeline-content">
                         <h4>Georgia Institute of Technology</h4>
                         <p>M.S. Computational Science and Engineering</p>
                     </div>
                     <div class="brief-timeline-logo-wrapper">
-                        <!-- Placeholder for Georgia Tech Logo -->
                         <svg class="placeholder-logo gt-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><text x="50" y="65" font-size="50" text-anchor="middle" fill="currentColor" font-family="sans-serif" font-weight="bold">GT</text></svg>
                     </div>
-                    <div class="brief-timeline-date">Current</div> <!-- Or specific years -->
+                    <div class="brief-timeline-date">Current</div>
                 </div>
             </div>
         </section>
-
 
         <section id="research" class="fade-in-section">
             <h2 class="section-title">Research</h2>
