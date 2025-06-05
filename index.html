@@ -11,25 +11,13 @@
     <link rel="stylesheet" href="style.css"> </head>
 
 <body>
-    <nav class="main-navbar">
-        <div class="navbar-container">
-            <a href="data/Mallick_Mainak_CV_03_2025_V2.pdf" target="_blank" class="navbar-logo">CV <span style="font-size:1.1em;vertical-align:middle;">&#x2193;</span></a>
-            <div class="navbar-right-items">
-                <ul class="navbar-links">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experiences">Experiences</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
-                <button id="theme-toggle" aria-label="Toggle theme">
-                </button>
-            </div>
-        </div>
-    </nav>
+
+    <button id="theme-toggle" aria-label="Toggle theme">
+        </button>
 
     <div class="container">
 
-        <header class="hero fade-in-section" id="hero">
+        <header class="hero fade-in-section">
             <div class="hero-content">
                 <h1 class="name">Mainak Mallick</h1>
                 <div class="intro-text">
@@ -54,92 +42,7 @@
             </div>
         </header>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills-section fade-in-section">
-            <h2 class="section-title">SKILLS</h2>
-            <div class="skills-grid">
-                <div class="skills-category">
-                    <h3>Languages</h3>
-                    <div class="skills-items">
-                        <div class="skill-item"><img src="images/skills/python.svg" alt="Python"><span>Python</span></div>
-                        <div class="skill-item"><img src="images/skills/cpp.svg" alt="C/C++"><span>C/C++</span></div>
-                        <div class="skill-item"><img src="images/skills/java.svg" alt="Java"><span>Java</span></div>
-                        <div class="skill-item"><img src="images/skills/ruby.svg" alt="Ruby"><span>Ruby</span></div>
-                        <div class="skill-item"><img src="images/skills/js.svg" alt="JavaScript"><span>JavaScript</span></div>
-                        <div class="skill-item"><img src="images/skills/ts.svg" alt="TypeScript"><span>TypeScript</span></div>
-                        <div class="skill-item"><img src="images/skills/sql.svg" alt="SQL"><span>SQL</span></div>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h3>Web/App Development</h3>
-                    <div class="skills-items">
-                        <div class="skill-item"><img src="images/skills/html.svg" alt="HTML"><span>HTML</span></div>
-                        <div class="skill-item"><img src="images/skills/css.svg" alt="CSS"><span>CSS</span></div>
-                        <div class="skill-item"><img src="images/skills/bootstrap.svg" alt="Bootstrap"><span>Bootstrap</span></div>
-                        <div class="skill-item"><img src="images/skills/django.svg" alt="Django"><span>Django</span></div>
-                        <div class="skill-item"><img src="images/skills/flask.svg" alt="Flask"><span>Flask</span></div>
-                        <div class="skill-item"><img src="images/skills/angular.svg" alt="AngularJS"><span>AngularJS</span></div>
-                        <div class="skill-item"><img src="images/skills/react.svg" alt="ReactJS"><span>ReactJS</span></div>
-                        <div class="skill-item"><img src="images/skills/rails.svg" alt="Ruby on Rails"><span>Ruby on Rails</span></div>
-                        <div class="skill-item"><img src="images/skills/node.svg" alt="Node.js"><span>Node.js</span></div>
-                        <div class="skill-item"><img src="images/skills/flutter.svg" alt="Flutter"><span>Flutter</span></div>
-                        <div class="skill-item"><img src="images/skills/swiftui.svg" alt="SwiftUI"><span>SwiftUI</span></div>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h3>Databases</h3>
-                    <div class="skills-items">
-                        <div class="skill-item"><img src="images/skills/mysql.svg" alt="MySQL"><span>MySQL</span></div>
-                        <div class="skill-item"><img src="images/skills/sqlite.svg" alt="SQLite"><span>SQLite</span></div>
-                        <div class="skill-item"><img src="images/skills/mongodb.svg" alt="MongoDB"><span>MongoDB</span></div>
-                        <div class="skill-item"><img src="images/skills/firebase.svg" alt="Firebase"><span>Firebase</span></div>
-                        <div class="skill-item"><img src="images/skills/postgres.svg" alt="PostgreSQL"><span>PostgreSQL</span></div>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h3>Cloud</h3>
-                    <div class="skills-items">
-                        <div class="skill-item"><img src="images/skills/aws.svg" alt="AWS"><span>AWS</span></div>
-                        <div class="skill-item"><img src="images/skills/gcp.svg" alt="GCP"><span>GCP</span></div>
-                        <div class="skill-item"><img src="images/skills/docker.svg" alt="Docker"><span>Docker</span></div>
-                        <div class="skill-item"><img src="images/skills/kafka.svg" alt="Kafka"><span>Kafka</span></div>
-                        <div class="skill-item"><img src="images/skills/kubernetes.svg" alt="Kubernetes"><span>Kubernetes</span></div>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h3>Developer Tools</h3>
-                    <div class="skills-items">
-                        <div class="skill-item"><img src="images/skills/android.svg" alt="Android Studio"><span>Android Studio</span></div>
-                        <div class="skill-item"><img src="images/skills/xcode.svg" alt="XCode"><span>XCode</span></div>
-                        <div class="skill-item"><img src="images/skills/git.svg" alt="Git"><span>Git</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experiences Timeline Section -->
-        <section id="experiences" class="experiences-section fade-in-section">
-            <h2 class="section-title">EXPERIENCES</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon"><img src="images/experiences/meta.png" alt="Meta"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2025 - 2025</span>
-                        <h3>Meta Platforms, Inc.</h3>
-                        <p>Software Development Engineer Intern</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon"><img src="images/experiences/usc.png" alt="USC"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2024 - 2025</span>
-                        <h3>University of Southern California</h3>
-                        <p>M.S Computer Science</p>
-                    </div>
-                </div>
-                <!-- Add more timeline items as needed -->
-            </div>
-        </section>
+  
 
         <section id="experience" class="fade-in-section">
             <h2 class="section-title">Professional Experience</h2>
@@ -258,9 +161,8 @@
 
         <section id="projects" class="fade-in-section">
             <h2 class="section-title">Projects</h2>
-            <div class="project-category">
-                <h3>Artificial Intelligence</h3>
             <div class="card-grid">
+
                 <article class="card">
                      <div class="card-image-wrapper">
                         <img src="images/Screenshot 2025-03-15 165839.png" alt="LLaMA Fine-Tuning Project Snippet">
@@ -361,14 +263,6 @@
                 </article>
 
             </div>
-            </div>
-            <div class="project-category">
-                <h3>Web Development</h3>
-                <div class="card-grid">
-                    <!-- Place Web Dev projects here -->
-                </div>
-            </div>
-            <!-- Add more categories as needed -->
         </section>
 
     </div> <footer class="site-footer">
