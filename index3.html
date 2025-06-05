@@ -1,0 +1,573 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Mainak Mallick - Portfolio</title>
+    <meta name="author" content="Mainak Mallick">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon"> <!-- Make sure this path is correct if using GitHub Pages -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Theme Variables --- */
+        :root {
+            /* Default: Dark Theme */
+            --bg-color: #1a1a1d;
+            --card-bg: #2c2c30;
+            --text-color: #f0f0f0;
+            --text-secondary: #a0a0a0;
+            --accent-gradient: linear-gradient(90deg, #8e44ad, #3498db);
+            --accent-color-1: #8e44ad;
+            --accent-color-2: #3498db;
+            --border-color: #444;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+            --link-hover-color: #5dade2;
+            --button-bg: var(--card-bg);
+            --button-border: var(--border-color);
+            --button-text: var(--text-color);
+            --button-hover-bg: #3a3a40;
+        }
+
+        body.light-theme {
+            /* Light Theme Overrides */
+            --bg-color: #f8f9fa;                     /* Light gray background */
+            --card-bg: #ffffff;                     /* White card background */
+            --text-color: #212529;                  /* Dark text */
+            --text-secondary: #6c757d;              /* Medium gray text */
+            /* Keep gradient or define light-theme specific one if needed */
+            /* --accent-gradient: linear-gradient(90deg, #a076d6, #7cc0f0); */
+            --accent-color-1: #8e44ad;              /* Keep purple or adjust */
+            --accent-color-2: #3498db;              /* Keep blue or adjust */
+            --border-color: #dee2e6;                /* Lighter border */
+            --shadow-color: rgba(0, 0, 0, 0.1);     /* Lighter shadow */
+            --link-hover-color: #2980b9;            /* Slightly darker blue hover */
+            --button-bg: #e9ecef;                   /* Light button background */
+            --button-border: #ced4da;               /* Light button border */
+            --button-text: var(--text-color);
+            --button-hover-bg: #dde1e4;
+        }
+
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            overflow-x: hidden;
+            opacity: 0;
+            animation: fadeInBody 0.8s 0.2s ease-out forwards;
+            transition: background-color 0.4s ease, color 0.4s ease; /* Smooth theme transition */
+        }
+
+        @keyframes fadeInBody {
+            to { opacity: 1; }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- Typography & Links --- */
+        h1, h2, h3 {
+            font-weight: 600;
+            margin-bottom: 0.8em;
+            line-height: 1.3;
+            color: var(--text-color); /* Ensure headings use text-color variable */
+             transition: color 0.4s ease;
+        }
+
+        h1.name {
+            font-size: 3em;
+            font-weight: 700;
+            text-align: center;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.3em;
+        }
+
+        h2.section-title {
+            font-size: 2.2em;
+            text-align: center;
+            margin-top: 3em;
+            margin-bottom: 1.5em;
+            position: relative;
+            /* color already set via h1,h2,h3 rule */
+        }
+        h2.section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-gradient);
+            margin: 0.3em auto 0;
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            color: var(--text-secondary);
+            font-weight: 300;
+             transition: color 0.4s ease;
+        }
+        p strong {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        a {
+            color: var(--accent-color-2);
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+        }
+        a:hover {
+            color: var(--link-hover-color);
+            text-decoration: underline;
+            transform: translateY(-2px);
+        }
+
+        /* --- Header/Profile Section --- */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 4em;
+        }
+        .profile-pic-wrapper {
+            width: 180px; height: 180px; border-radius: 50%;
+            overflow: hidden; margin-bottom: 1.5em;
+            border: 4px solid var(--card-bg); /* Use variable */
+            box-shadow: 0 5px 15px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.4s ease; /* Transition border */
+            cursor: pointer;
+        }
+        .profile-pic-wrapper:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px var(--shadow-color);
+        }
+        .profile-pic { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .intro-text { max-width: 700px; text-align: justify; margin-bottom: 1.5em; }
+        .intro-text p { margin-bottom: 1.5em; }
+        .social-links p { margin: 0; font-size: 1.1em; }
+        .social-links a {
+            margin: 0 12px; font-weight: 400;
+            color: var(--text-secondary); /* Use variable */
+            position: relative; text-decoration: none;
+        }
+         .social-links a:hover {
+            color: var(--text-color); /* Use variable */
+            transform: translateY(-3px);
+             text-decoration: none;
+         }
+         .social-links a::after { content: ''; position: absolute; width: 100%; height: 2px; bottom: -4px; left: 0; background: var(--accent-gradient); transform: scaleX(0); transform-origin: bottom right; transition: transform 0.3s ease-out; }
+         .social-links a:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+
+
+        /* --- Card Layout (Research & Projects) --- */
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease, border-color 0.4s ease; /* Smooth theme transition */
+            display: flex; flex-direction: column;
+            border: 1px solid var(--border-color);
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 25px var(--shadow-color);
+        }
+        .card-image-wrapper { width: 100%; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 8px; margin-bottom: 20px; }
+        .card-image-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; cursor: pointer; }
+        .card:hover .card-image-wrapper img { transform: scale(1.08); }
+        .card-content { flex-grow: 1; display: flex; flex-direction: column; }
+        .card-content h3 { font-size: 1.3em; margin-bottom: 0.5em; /* color set globally */ transition: color 0.3s ease; position: relative; }
+        .card-content h3 a { color: inherit; text-decoration: none; }
+        .card-content h3 a:hover { color: var(--link-hover-color); text-decoration: underline; transform: none; }
+        .card-content h3.collapsible-trigger { cursor: pointer; padding-right: 25px; }
+        .card-content h3.collapsible-trigger::after { content: '+'; position: absolute; right: 5px; top: 50%; transform: translateY(-50%); font-size: 1.2em; color: var(--accent-color-2); transition: transform 0.3s ease, color 0.3s ease; }
+        .card-content h3.collapsible-trigger.active::after { content: '−'; transform: translateY(-50%) rotate(180deg); color: var(--accent-color-1); }
+        .card-meta { font-size: 0.9em; color: var(--text-secondary); margin-bottom: 1em; font-style: italic; }
+        .card-meta strong { color: var(--text-secondary); font-weight: 600; }
+        .papertitle { font-weight: 700; color: var(--accent-color-1); }
+        .card-content a .papertitle:hover { color: var(--link-hover-color); }
+        .card-content ul { list-style: none; padding-left: 5px; margin-top: 0.8em; flex-grow: 1; color: var(--text-secondary); font-size: 0.95em; }
+        .card-content li { margin-bottom: 0.6em; position: relative; padding-left: 20px; }
+        .card-content li::before { content: '▹'; position: absolute; left: 0; top: 1px; color: var(--accent-color-2); font-weight: bold; }
+        .card-content li strong { color: var(--text-color); }
+        .collapsible-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; }
+
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            margin-top: 4em;
+            padding-top: 2em;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            transition: border-color 0.4s ease, color 0.4s ease; /* Smooth theme transition */
+        }
+        .footer p { margin-bottom: 0.5em; } /* Reduce footer paragraph spacing */
+        .footer a { color: var(--text-secondary); font-weight: 400; }
+        .footer a:hover { color: var(--text-color); }
+
+        /* --- Lightbox Styles --- */
+        .lightbox-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: none; justify-content: center; align-items: center;
+            z-index: 1000; cursor: pointer; animation: fadeInLightbox 0.3s ease;
+        }
+        @keyframes fadeInLightbox { from { opacity: 0; } to { opacity: 1; } }
+        .lightbox-content { position: relative; max-width: 90%; max-height: 90%; cursor: default; display: flex; justify-content: center; align-items: center; }
+        .lightbox-content img { max-width: 100%; max-height: 100%; height: auto; display: block; border-radius: 5px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .lightbox-close {
+            position: absolute; top: -15px; right: -15px;
+            background-color: var(--bg-color); /* Use variable */
+            color: var(--text-color); /* Use variable */
+            border: 2px solid var(--border-color); /* Use variable */
+            border-radius: 50%; width: 35px; height: 35px;
+            font-size: 22px; font-weight: bold; line-height: 31px;
+            text-align: center; cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.2s, color 0.2s, transform 0.2s, border-color 0.4s ease; /* Transition border */
+        }
+        .lightbox-close:hover {
+             background-color: var(--card-bg); /* Use variable */
+             color: var(--accent-color-1);
+             transform: rotate(90deg);
+        }
+
+        /* --- Scroll Animation --- */
+        .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
+
+        /* --- Theme Toggle Button --- */
+        #theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--button-bg);
+            border: 1px solid var(--button-border);
+            color: var(--button-text);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em; /* Adjust icon size */
+            z-index: 1001; /* Above lightbox overlay trigger */
+            box-shadow: 0 2px 5px var(--shadow-color);
+            transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
+        }
+        #theme-toggle:hover {
+            background-color: var(--button-hover-bg);
+             transform: scale(1.1);
+        }
+         #theme-toggle svg {
+            width: 20px; /* Control icon size */
+            height: 20px;
+            fill: currentColor; /* Icon color matches button text */
+         }
+
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            h1.name { font-size: 2.5em; }
+            h2.section-title { font-size: 1.8em; }
+            .profile-pic-wrapper { width: 150px; height: 150px; }
+            .container { padding: 30px 15px; }
+            .card-grid { grid-template-columns: 1fr; }
+            #theme-toggle { top: 15px; right: 15px; width: 36px; height: 36px; font-size: 1.1em; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" aria-label="Toggle theme">
+        <!-- Icons will be added by JavaScript -->
+    </button>
+
+    <div class="container">
+
+        <!-- Hero Section -->
+        <header class="hero fade-in-section">
+            <div class="profile-pic-wrapper lightbox-trigger" data-src="images/1744343109904.jpg">
+                <img class="profile-pic" alt="Mainak Mallick profile photo" src="images/1744343109904.jpg">
+            </div>
+            <h1 class="name">Mainak Mallick</h1>
+            <div class="intro-text">
+                <p>
+                    1st Year Graduate Student in Computational Science and Engineering at <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer">Georgia Tech</a>.
+                    Currently researching <strong>Time series Forecasting on MultiModal Datasets using Transformers</strong> and <strong>Fault Classification with Meta-Learning for Imbalanced Datasets</strong> under Prof. Seung-Kyum Choi.
+                </p>
+                <p>
+                     My interests span <strong>multi-modal forecasting</strong>, <strong>meta-learning</strong>, <strong>Imitation Learning</strong>, <strong>foundation models</strong>, <strong>CV/NLP</strong>, <strong>few-shot learning</strong>, <strong>digital twins</strong>, and <strong>predictive maintenance</strong>. I'm increasingly focused on <strong>Robotics/Embodied AI</strong>, including <strong>3D vision</strong>, <strong>occupancy prediction</strong>, <strong>robot arm control</strong>, <strong>visual & long-horizon decision-making</strong>, and <strong>TAMP</strong> in complex environments.
+                </p>
+                <p>
+                    Previously, as a <strong>Data Scientist</strong> at HSBC, I optimized <strong>decision systems</strong> for Collections & Recoveries, developing models for <strong>risk assessment</strong> and workflow automation.
+                </p>
+            </div>
+            <div class="social-links">
+                <p>
+                    <a href="mailto:mainakmallick2001@gmail.com">Email</a> &nbsp;/&nbsp;
+                    <a href="data/Mallick_Mainak_CV_03_2025_V2.pdf" target="_blank">CV</a> &nbsp;/&nbsp; <!-- Make sure path is correct -->
+                    <a href="https://scholar.google.com/citations?user=CpKC0M4AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a> &nbsp;/&nbsp;
+                    <a href="https://linkedin.com/in/mainakmallick" target="_blank" rel="noopener noreferrer">LinkedIn</a> &nbsp;/&nbsp;
+                    <a href="https://github.com/MainakMallick" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </p>
+            </div>
+        </header>
+
+        <!-- Research Section -->
+        <section id="research" class="fade-in-section">
+            <h2 class="section-title">Research</h2>
+            <div class="card-grid">
+                <!-- Research Card 1 -->
+                <article class="card">
+                     <div class="card-image-wrapper lightbox-trigger" data-src="images/Research2.png">
+                        <img src="images/Research2.png" alt="Ensemble Meta-Learning Research Visualization">
+                    </div>
+                    <div class="card-content">
+                        <h3>
+                            <a href="https://www.mdpi.com/1424-8220/25/6/1745" target="_blank" rel="noopener noreferrer">
+                                <span class="papertitle">Ensemble-Based Model-Agnostic Meta-Learning...</span>
+                            </a>
+                        </h3>
+                         <p class="card-meta">
+                            <strong>Mainak Mallick</strong>, Young-Dae Shim, Seung-Kyum Choi <br>
+                             <em>MDPI, Sensors</em>, 2024
+                        </p>
+                        <ul>
+                            <li>Developed an <strong>ensemble meta-learning framework</strong> with <strong>digital twins</strong> for real-time robotic arm fault classification.</li>
+                            <li>Utilized <strong>Latin Hypercube Sampling (LHS)</strong> for enhanced generalization and stability in <strong>cross-domain fault detection</strong>.</li>
+                            <li>Demonstrated superior performance over <strong>ANIL, ProtoNet, and Reptile</strong> in classification accuracy on synthetic vibration data.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Research Card 2 -->
+                <article class="card">
+                     <div class="card-image-wrapper lightbox-trigger" data-src="images/Research1.jpg">
+                        <img src="images/Research1.jpg" alt="Honeycomb Panel Optimization Visualization">
+                    </div>
+                     <div class="card-content">
+                        <h3>
+                            <a href="https://doi.org/10.1016/j.matpr.2021.10.388" target="_blank" rel="noopener noreferrer">
+                                <span class="papertitle">Genetic Algorithm-Based Design Optimization...</span>
+                            </a>
+                        </h3>
+                        <p class="card-meta">
+                             <strong>Mainak Mallick</strong>, A. Chakrabarty, N. Khutia <br>
+                            <em>Materials Today</em>, 2022
+                        </p>
+                        <ul>
+                            <li>Optimized <strong>honeycomb sandwich panels</strong> for improved <strong>impact energy absorption</strong> via <strong>NSGA-II</strong>.</li>
+                            <li>Integrated <strong>MATLAB-ABAQUS</strong> with <strong>Python scripting</strong> to optimize core cell count and wall thickness.</li>
+                            <li>Achieved significant improvements in panel performance metrics through multi-objective optimization.</li>
+                        </ul>
+                     </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="fade-in-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="card-grid">
+
+                <!-- Project Card 1 -->
+                 <article class="card">
+                     <div class="card-image-wrapper lightbox-trigger" data-src="images/Screenshot 2025-03-15 165839.png">
+                        <img src="images/Screenshot 2025-03-15 165839.png" alt="LLaMA Fine-Tuning Project Snippet">
+                     </div>
+                     <div class="card-content">
+                         <h3 class="collapsible-trigger">Fine-Tuning LLaMA 3B for Code Completion
+                             <span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Jan 2025 - Present</span>
+                         </h3>
+                         <ul class="collapsible-content">
+                            <li>Comparing <strong>ReFT vs IA3</strong> for parameter-efficient fine-tuning of <strong>LLAMA 3B</strong> on <strong>HumanEval</strong>.</li>
+                            <li>Analyzing <strong>ReFT's representation edits</strong> vs <strong>IA3's activation scaling</strong> for program synthesis.</li>
+                            <li>Benchmarking <strong>ReFT's efficiency gains</strong> against <strong>IA3's lightweight adaptation</strong> on coding tasks.</li>
+                         </ul>
+                     </div>
+                 </article>
+
+                 <!-- Project Card 2 -->
+                 <article class="card">
+                    <div class="card-image-wrapper lightbox-trigger" data-src="images/Screenshot 2025-03-15 124538.png">
+                       <img src="images/Screenshot 2025-03-15 124538.png" alt="Volumetric Occupancy Prediction Project Visualization">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="collapsible-trigger">
+                             <a href="https://loggs.github.io/cs7641-project-proposal/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+                                 Volumetric Occupancy Prediction & Labeling
+                             </a>
+                            <span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Aug 2024 - Dec 2024</span>
+                        </h3>
+                        <ul class="collapsible-content">
+                             <li>Developed <strong>ISO model-based framework</strong> for volumetric occupancy prediction indoors.</li>
+                             <li>Integrated <strong>YOLO</strong> for real-time object detection and segmentation.</li>
+                             <li>Employed <strong>CLIP</strong> for semantic labeling, enabling contextual understanding of scenes.</li>
+                        </ul>
+                    </div>
+                 </article>
+
+                 <!-- Project Card 3 -->
+                 <article class="card">
+                    <div class="card-image-wrapper lightbox-trigger" data-src="images/Screenshot 2025-03-15 174632.png">
+                        <img src="images/Screenshot 2025-03-15 174632.png" alt="AI Research Recommender Project Interface">
+                    </div>
+                     <div class="card-content">
+                         <h3 class="collapsible-trigger">AI-Powered Research Paper Recommender
+                             <span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Jun 2022 - Aug 2022</span>
+                         </h3>
+                         <ul class="collapsible-content">
+                            <li>Built a recommender using <strong>React, Node.js, MongoDB, OpenAI API</strong>.</li>
+                            <li>Integrated <strong>arXiv/Semantic Scholar APIs</strong> for paper fetching and summary generation.</li>
+                            <li>Utilized <strong>OpenAI</strong> for AI-driven, personalized paper suggestions based on user input.</li>
+                         </ul>
+                     </div>
+                 </article>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer fade-in-section">
+             <!-- UPDATED FOOTER CONTENT -->
+            <p>&copy; <span id="copyright-year"></span> Mainak Mallick. All rights reserved.</p>
+            <p>
+                Inspired by modern web design trends &amp; <a href="https://jonbarron.info/" target="_blank" rel="noopener noreferrer">Jon Barron's site</a>.
+                Modified source <a href="https://github.com/MainakMallick/website" target="_blank" rel="noopener noreferrer">on GitHub</a>.
+            </p>
+             <!-- END UPDATED FOOTER CONTENT -->
+        </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Lightbox Structure (Hidden) -->
+    <div id="lightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Lightbox image view">
+             <button id="lightbox-close-btn" class="lightbox-close" aria-label="Close image viewer">&times;</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+             // --- Theme Toggle Functionality ---
+             const themeToggle = document.getElementById('theme-toggle');
+             const body = document.body;
+             const sunIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.758a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/></svg>`;
+             const moonIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-3.815 2.04-7.174 5.168-8.97a.75.75 0 01.819.162z" clip-rule="evenodd" /></svg>`;
+             let currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); // Default based on system or local storage
+
+             function applyTheme(theme) {
+                 if (theme === 'light') {
+                     body.classList.add('light-theme');
+                     themeToggle.innerHTML = moonIcon;
+                     localStorage.setItem('theme', 'light');
+                 } else {
+                     body.classList.remove('light-theme');
+                     themeToggle.innerHTML = sunIcon;
+                     localStorage.setItem('theme', 'dark');
+                 }
+                 currentTheme = theme;
+             }
+
+             themeToggle.addEventListener('click', () => {
+                 applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+             });
+
+             // Apply initial theme on load
+             applyTheme(currentTheme);
+
+             // --- Lightbox Functionality ---
+             // (Lightbox JS code remains the same as before)
+             const lightbox = document.getElementById('lightbox');
+             const lightboxImg = document.getElementById('lightbox-img');
+             const lightboxCloseBtn = document.getElementById('lightbox-close-btn');
+             const lightboxTriggers = document.querySelectorAll('.lightbox-trigger');
+             function openLightbox(event) {
+                  let imgSrc = event.currentTarget.dataset.src || event.currentTarget.querySelector('img')?.src;
+                  if (imgSrc && lightbox && lightboxImg) {
+                      lightboxImg.src = imgSrc;
+                      lightbox.style.display = 'flex';
+                      document.body.style.overflow = 'hidden';
+                  }
+             }
+             function closeLightbox() {
+                  if (lightbox) {
+                      lightbox.style.display = 'none';
+                      lightboxImg.src = '';
+                      document.body.style.overflow = '';
+                  }
+              }
+              lightboxTriggers.forEach(trigger => { trigger.addEventListener('click', openLightbox); });
+              if (lightboxCloseBtn) { lightboxCloseBtn.addEventListener('click', closeLightbox); }
+              if (lightbox) { lightbox.addEventListener('click', function(event) { if (event.target === lightbox) { closeLightbox(); } }); }
+              document.addEventListener('keydown', function(event) { if (event.key === 'Escape' && lightbox && lightbox.style.display === 'flex') { closeLightbox(); } });
+
+             // --- Collapsible Section Functionality ---
+             // (Collapsible JS code remains the same as before)
+             const collapsibleTriggers = document.querySelectorAll('.collapsible-trigger');
+             collapsibleTriggers.forEach(trigger => {
+                  const card = trigger.closest('.card');
+                  const content = card ? card.querySelector('.collapsible-content') : null;
+                  if (content) {
+                       trigger.addEventListener('click', function(e) {
+                          if (e.target.tagName === 'A') { return; }
+                          this.classList.toggle('active');
+                          if (content.style.maxHeight && content.style.maxHeight !== '0px') { content.style.maxHeight = '0px'; }
+                          else { content.style.maxHeight = content.scrollHeight + "px"; }
+                       });
+                  }
+             });
+
+             // --- Scroll Animation Functionality ---
+             // (Scroll Animation JS code remains the same as before)
+             const fadeElements = document.querySelectorAll('.fade-in-section');
+             const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+             const observer = new IntersectionObserver((entries, observer) => {
+                 entries.forEach(entry => {
+                     if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+                 });
+             }, observerOptions);
+             fadeElements.forEach(el => { observer.observe(el); });
+
+             // --- Update Copyright Year ---
+             const yearSpan = document.getElementById('copyright-year');
+             if (yearSpan) {
+                 yearSpan.textContent = new Date().getFullYear();
+             }
+
+        });
+    </script>
+
+</body>
+</html>
