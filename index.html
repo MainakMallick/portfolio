@@ -5,16 +5,26 @@
     <title>Mainak Mallick - Portfolio</title>
     <meta name="author" content="Mainak Mallick">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
 
     <button id="theme-toggle" aria-label="Toggle theme">
-        </button>
+    </button>
 
+    <nav class="top-nav">
+        <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
     <div class="container">
 
         <header class="hero fade-in-section">
@@ -42,74 +52,112 @@
             </div>
         </header>
 
-  
-
+        <section id="skills" class="fade-in-section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Icon"/>
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="https://raw.githubusercontent.com/pytorch/pytorch/master/docs/source/_static/img/pytorch-logo-dark.svg" alt="PyTorch Icon" style="filter: var(--svg-filter);"/>
+                    <h3>PyTorch</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js Icon"/>
+                    <h3>Vue.js</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask Icon"/>
+                    <h3>Flask</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker Icon"/>
+                    <h3>Docker</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS Icon" style="filter: var(--svg-filter);"/>
+                    <h3>AWS</h3>
+                </div>
+                 <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Icon"/>
+                    <h3>React</h3>
+                </div>
+                 <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Icon"/>
+                    <h3>Node.js</h3>
+                </div>
+            </div>
+        </section>
         <section id="experience" class="fade-in-section">
             <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Predictive maintenance of Robotic Hand with Digital Twin and MAML algorithm</h3>
-                        <div class="experience-position">Graduate Research Assistant</div>
-                        <div class="experience-duration">Dec 2024 - Present</div>
-                        <div class="experience-company">Georgia Tech (Supervisor – Dr. Seung-Kyum Choi)</div>
-                    </div>
-                    <ul class="experience-points">
-                        <li>Generated synthetic sensor data using <strong>Isaac Sim</strong> to simulate real-world movement of a <strong>KUKA LBR robot arm</strong>.</li>
-                        <li>Developed a few shot learning pipeline using the <strong>MAML algorithm</strong> for fault classification in difference joints.</li>
-                        <li>Achieved over <strong>86.4% testing accuracy</strong> by optimizing the model with a minimal dataset.</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Icon"/> Python</span>
-                        <span class="tech-item"><img src="https://raw.githubusercontent.com/pytorch/pytorch/master/docs/source/_static/img/pytorch-logo-dark.svg" alt="PyTorch Icon" style="filter: var(--svg-filter);"/> PyTorch</span>
-                        <span class="tech-item"><img src="https://www.vectorlogo.zone/logos/nvidia/nvidia-icon.svg" alt="Isaac Sim Icon"/> Isaac Sim</span>
-                    </div>
-                </div>
-
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Full Stack Development</h3>
-                        <div class="experience-position">Graduate Research Assistant</div>
-                        <div class="experience-duration">Aug 2024 - Dec 2024</div>
-                        <div class="experience-company">Georgia Tech (Supervisor – Dr. Seung-Kyum Choi)</div>
-                    </div>
-                    <ul class="experience-points">
-                        <li>Built responsive UIs using <strong>Vue.js</strong> and <strong>E-Charts</strong> to visualize real-time sensor data, reducing access time by <strong>20%</strong>.</li>
-                        <li>Engineered REST APIs with <strong>Flask</strong>, integrated <strong>WebSocket</strong> and <strong>Redis</strong>, cutting data latency by <strong>28%</strong> and supporting <strong>30%</strong> more concurrent users.</li>
-                        <li>Streamlined <strong>CI/CD pipelines</strong> and deployments using <strong>Docker</strong>, <strong>GitHub Actions</strong>, and <strong>AWS S3</strong>, improving deployment speed by <strong>40%</strong> and reducing manual errors by <strong>50%</strong>.</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js Icon"/> Vue.js</span>
-                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask Icon"/> Flask</span>
-                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis Icon"/> Redis</span>
-                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker Icon"/> Docker</span>
-                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS Icon" style="filter: var(--svg-filter);"/> AWS</span>
+            <div class="timeline">
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Predictive maintenance of Robotic Hand with Digital Twin and MAML algorithm</h3>
+                            <div class="experience-position">Graduate Research Assistant</div>
+                            <div class="experience-duration">Dec 2024 - Present</div>
+                            <div class="experience-company">Georgia Tech (Supervisor – Dr. Seung-Kyum Choi)</div>
+                        </div>
+                        <ul class="experience-points">
+                            <li>Generated synthetic sensor data using <strong>Isaac Sim</strong> to simulate real-world movement of a <strong>KUKA LBR robot arm</strong>.</li>
+                            <li>Developed a few shot learning pipeline using the <strong>MAML algorithm</strong> for fault classification in difference joints.</li>
+                            <li>Achieved over <strong>86.4% testing accuracy</strong> by optimizing the model with a minimal dataset.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Icon"/> Python</span>
+                            <span class="tech-item"><img src="https://raw.githubusercontent.com/pytorch/pytorch/master/docs/source/_static/img/pytorch-logo-dark.svg" alt="PyTorch Icon" style="filter: var(--svg-filter);"/> PyTorch</span>
+                            <span class="tech-item"><img src="https://www.vectorlogo.zone/logos/nvidia/nvidia-icon.svg" alt="Isaac Sim Icon"/> Isaac Sim</span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Managed Collections and Recoveries Decision systems</h3>
-                        <div class="experience-position">Software Engineer</div>
-                        <div class="experience-duration">July 2022 - Aug 2024</div>
-                        <div class="experience-company">HSBC Bank</div>
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Full Stack Development</h3>
+                            <div class="experience-position">Graduate Research Assistant</div>
+                            <div class="experience-duration">Aug 2024 - Dec 2024</div>
+                            <div class="experience-company">Georgia Tech (Supervisor – Dr. Seung-Kyum Choi)</div>
+                        </div>
+                        <ul class="experience-points">
+                            <li>Built responsive UIs using <strong>Vue.js</strong> and <strong>E-Charts</strong> to visualize real-time sensor data, reducing access time by <strong>20%</strong>.</li>
+                            <li>Engineered REST APIs with <strong>Flask</strong>, integrated <strong>WebSocket</strong> and <strong>Redis</strong>, cutting data latency by <strong>28%</strong> and supporting <strong>30%</strong> more concurrent users.</li>
+                            <li>Streamlined <strong>CI/CD pipelines</strong> and deployments using <strong>Docker</strong>, <strong>GitHub Actions</strong>, and <strong>AWS S3</strong>, improving deployment speed by <strong>40%</strong> and reducing manual errors by <strong>50%</strong>.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js Icon"/> Vue.js</span>
+                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask Icon"/> Flask</span>
+                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis Icon"/> Redis</span>
+                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker Icon"/> Docker</span>
+                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS Icon" style="filter: var(--svg-filter);"/> AWS</span>
+                        </div>
                     </div>
-                    <ul class="experience-points">
-                        <li>Built and maintained full-stack web apps for risk analysis tools using <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>.</li>
-                        <li>Developed REST APIs and microservices with <strong>Spring Boot</strong>, <strong>Java</strong>, and <strong>PostgreSQL</strong> for data integration.</li>
-                        <li>Deployed <strong>24+</strong> business critical code changes in <strong>SAS EG</strong> and <strong>SAS ID</strong> env., impacting over <strong>£3 million</strong> in assets.</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Icon"/> React</span>
-                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Icon"/> Node.js</span>
-                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB Icon"/> MongoDB</span>
-                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot Icon"/> Spring</span>
-                        <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL Icon"/> PostgreSQL</span>
+                </div>
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                         <div class="experience-header">
+                            <h3 class="experience-title">Managed Collections and Recoveries Decision systems</h3>
+                            <div class="experience-position">Software Engineer</div>
+                            <div class="experience-duration">July 2022 - Aug 2024</div>
+                            <div class="experience-company">HSBC Bank</div>
+                        </div>
+                        <ul class="experience-points">
+                            <li>Built and maintained full-stack web apps for risk analysis tools using <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>.</li>
+                            <li>Developed REST APIs and microservices with <strong>Spring Boot</strong>, <strong>Java</strong>, and <strong>PostgreSQL</strong> for data integration.</li>
+                            <li>Deployed <strong>24+</strong> business critical code changes in <strong>SAS EG</strong> and <strong>SAS ID</strong> env., impacting over <strong>£3 million</strong> in assets.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Icon"/> React</span>
+                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Icon"/> Node.js</span>
+                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB Icon"/> MongoDB</span>
+                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot Icon"/> Spring</span>
+                            <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL Icon"/> PostgreSQL</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <section id="research" class="fade-in-section">
             <h2 class="section-title">Research</h2>
             <div class="card-grid">
@@ -161,20 +209,21 @@
 
         <section id="projects" class="fade-in-section">
             <h2 class="section-title">Projects</h2>
-            <div class="card-grid">
 
+            <h3 class="project-category">Artificial Intelligence</h3>
+            <div class="card-grid">
                 <article class="card">
                      <div class="card-image-wrapper">
-                        <img src="images/Screenshot 2025-03-15 165839.png" alt="LLaMA Fine-Tuning Project Snippet">
+                         <img src="images/Screenshot 2025-03-15 165839.png" alt="LLaMA Fine-Tuning Project Snippet">
                      </div>
                      <div class="card-content">
                          <h3 class="collapsible-trigger">Fine-Tuning LLaMA 3B for Code Completion
                              <span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Jan 2025 - Present</span>
                          </h3>
                          <ul class="collapsible-content">
-                            <li>Comparing <strong>ReFT vs IA3</strong> for parameter-efficient fine-tuning of <strong>LLAMA 3B</strong> on <strong>HumanEval</strong>.</li>
-                            <li>Analyzing <strong>ReFT's representation edits</strong> vs <strong>IA3's activation scaling</strong> for program synthesis.</li>
-                            <li>Benchmarking <strong>ReFT's efficiency gains</strong> against <strong>IA3's lightweight adaptation</strong> on coding tasks.</li>
+                             <li>Comparing <strong>ReFT vs IA3</strong> for parameter-efficient fine-tuning of <strong>LLAMA 3B</strong> on <strong>HumanEval</strong>.</li>
+                             <li>Analyzing <strong>ReFT's representation edits</strong> vs <strong>IA3's activation scaling</strong> for program synthesis.</li>
+                             <li>Benchmarking <strong>ReFT's efficiency gains</strong> against <strong>IA3's lightweight adaptation</strong> on coding tasks.</li>
                          </ul>
                      </div>
                  </article>
@@ -199,25 +248,6 @@
                  </article>
 
                  <article class="card">
-                    <div class="card-image-wrapper">
-                        <img src="images/Screenshot 2025-03-15 174632.png" alt="AI Research Recommender Project Interface">
-                    </div>
-                     <div class="card-content">
-                         <h3 class="collapsible-trigger">
-                            <a href="https://mainakmallick.github.io/aether_assist/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
-                            AI-Powered Research Paper Recommender
-                            </a>
-                            <span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Jun 2022 - Aug 2022</span>
-                         </h3>
-                         <ul class="collapsible-content">
-                            <li>Built a recommender using <strong>React, Node.js, MongoDB, OpenAI API</strong>.</li>
-                            <li>Integrated <strong>arXiv/Semantic Scholar APIs</strong> for paper fetching and summary generation.</li>
-                            <li>Utilized <strong>OpenAI</strong> for AI-driven, personalized paper suggestions based on user input.</li>
-                         </ul>
-                     </div>
-                 </article>
-
-                <article class="card">
                     <div class="card-image-wrapper">
                         <img src="images/placeholder_defect_detection.png" alt="Automated Defect Detection Project Visualization">
                     </div>
@@ -246,8 +276,30 @@
                         </ul>
                     </div>
                 </article>
+            </div>
 
+            <h3 class="project-category">Web Development</h3>
+            <div class="card-grid">
                 <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="images/Screenshot 2025-03-15 174632.png" alt="AI Research Recommender Project Interface">
+                    </div>
+                     <div class="card-content">
+                         <h3 class="collapsible-trigger">
+                            <a href="https://mainakmallick.github.io/aether_assist/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+                                AI-Powered Research Paper Recommender
+                            </a>
+                            <span style="font-size: 0.8em; color: var(--text-secondary); font-style: italic; display: block; margin-top: 2px;">Jun 2022 - Aug 2022</span>
+                         </h3>
+                         <ul class="collapsible-content">
+                             <li>Built a recommender using <strong>React, Node.js, MongoDB, OpenAI API</strong>.</li>
+                             <li>Integrated <strong>arXiv/Semantic Scholar APIs</strong> for paper fetching and summary generation.</li>
+                             <li>Utilized <strong>OpenAI</strong> for AI-driven, personalized paper suggestions based on user input.</li>
+                         </ul>
+                     </div>
+                 </article>
+
+                 <article class="card">
                     <div class="card-image-wrapper">
                         <img src="images/placeholder_latex_editor.png" alt="AI Agent Latex Editor Project Visualization">
                     </div>
@@ -261,15 +313,16 @@
                         </ul>
                     </div>
                 </article>
-
             </div>
         </section>
+        </div>
 
-    </div> <footer class="site-footer">
+    <footer class="site-footer">
         <div class="footer-content">
             <p class="copyright">© <span id="copyright-year"></span> Mainak Mallick. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script> </body>
+    <script src="script.js"></script>
+</body>
 </html>
