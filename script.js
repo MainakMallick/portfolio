@@ -37,3 +37,49 @@ document.addEventListener('DOMContentLoaded', function() {
      if (yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
 
 });
+// --- Typing Animation Functionality ---
+    const typingElement = document.getElementById('typing-animation');
+    if (typingElement) {
+        const roles = ["Machine Learning Engineer", "Data Analyst", "Full Stack Developer"];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100; // Speed of typing
+        const deletingSpeed = 50; // Speed of deleting
+        const delayBetweenRoles = 1500; // Pause after typing a role
+        const delayAfterDeleting = 300; // Pause after deleting before typing next
+
+        function typeRole() {
+            const currentRole = roles[roleIndex];
+            let displayText = '';
+
+            if (isDeleting) {
+                // Deleting
+                displayText = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                // Typing
+                displayText = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            typingElement.textContent = displayText;
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                // Finished typing current role
+                isDeleting = true;
+                setTimeout(typeRole, delayBetweenRoles); // Pause before deleting
+            } else if (isDeleting && charIndex === 0) {
+                // Finished deleting current role
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length; // Move to next role
+                setTimeout(typeRole, delayAfterDeleting); // Pause before typing next role
+            } else {
+                // Continue typing or deleting
+                setTimeout(typeRole, isDeleting ? deletingSpeed : typingSpeed);
+            }
+        }
+        // Start the animation
+        setTimeout(typeRole, delayBetweenRoles);
+    }
+});
