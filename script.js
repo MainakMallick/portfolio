@@ -36,8 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
      const yearSpan = document.getElementById('copyright-year');
      if (yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
 
-});
-// --- Typing Animation Functionality ---
+     // --- Typing Animation Functionality ---
     const typingElement = document.getElementById('typing-animation');
     if (typingElement) {
         const roles = ["Machine Learning Engineer", "Data Analyst", "Full Stack Developer"];
@@ -82,4 +81,5 @@ document.addEventListener('DOMContentLoaded', function() {
         // Start the animation
         setTimeout(typeRole, delayBetweenRoles);
     }
+
 });
